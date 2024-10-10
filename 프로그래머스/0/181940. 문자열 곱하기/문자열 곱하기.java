@@ -3,9 +3,7 @@ class Solution {
         String answer = "";
 
         for(int i=0; i<k; i++){
-            for(int j=0; j<my_string.length(); j++){
-                answer+=my_string.charAt(j);
-            }
+                answer+=my_string;
         }
         return answer;
     }
