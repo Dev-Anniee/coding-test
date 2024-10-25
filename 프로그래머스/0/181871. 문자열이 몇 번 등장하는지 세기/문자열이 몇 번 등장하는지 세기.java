@@ -3,11 +3,11 @@ class Solution {
         int index = 0;
         int answer =0;
         while(true){
-            index = myString.indexOf(pat, index);
+            index = myString.indexOf(pat);
+            myString = myString.substring(index+1);
             if(index ==-1)
                 break;
             answer++;
-            index++;
        }
 
         return answer;
