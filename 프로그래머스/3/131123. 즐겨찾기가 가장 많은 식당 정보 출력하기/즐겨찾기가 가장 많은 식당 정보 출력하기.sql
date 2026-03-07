@@ -1,0 +1,12 @@
+SELECT sub.FOOD_TYPE, sub.REST_ID, sub.REST_NAME, sub.FAVORITES
+FROM (SELECT 
+        FOOD_TYPE, 
+        REST_ID, 
+        REST_NAME, 
+        FAVORITES,
+        DENSE_RANK() 
+        OVER(PARTITION BY FOOD_TYPE ORDER BY FAVORITES DESC) as rnk 
+        FROM REST_INFO
+)sub
+WHERE sub.rnk=1
+ORDER BY FOOD_TYPE DESC;
