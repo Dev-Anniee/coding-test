@@ -2,40 +2,36 @@ import java.util.*;
 import java.io.*;
 
 class Main {
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args) throws IOException{
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        StringBuilder sb = new StringBuilder(); 
-
-        while (true) {
-            String sentence = br.readLine();
-            if (".".equals(sentence)) break;
-
-            sb.append(solve(sentence)).append("\n"); 
-        }
-        System.out.print(sb); 
-    }
-
-    public static String solve(String s) {
+        String sentence ="";
         Stack<Character> st = new Stack<>();
-
-        for (int i = 0; i < s.length(); i++) {
-            char c = s.charAt(i);
-
-            if (c == '(' || c == '[') {
-                st.push(c);
-            } 
-
-            else if (c == ')') {
-                if (st.isEmpty() || st.peek() != '(') return "no";
-                st.pop();
-            } 
-
-            else if (c == ']') {
-                if (st.isEmpty() || st.peek() != '[') return "no";
-                st.pop();
+        
+        while (true){
+            sentence = br.readLine();
+            if(".".equals(sentence)) break;
+            
+            st.clear();
+            for(int i=0; i<sentence.length(); i++){
+                if(sentence.charAt(i)=='(') {st.push('(');}
+                else if(sentence.charAt(i)==')') {
+                    if(!st.isEmpty()&&st.peek()=='(')
+                       st.pop(); 
+                    else {st.push(')');break;}
+                }
+                
+                else if(sentence.charAt(i)=='[') {st.push('[');}
+                else if(sentence.charAt(i)==']') {
+                    if(!st.isEmpty()&&st.peek()=='[')
+                       st.pop();
+                    else { st.push(']');break;}
+                }
             }
+            if(st.isEmpty()) 
+                System.out.println("yes");
+            else 
+                System.out.println("no");
         }
-
-        return st.isEmpty() ? "yes" : "no";
+            
     }
 }
