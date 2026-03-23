@@ -19,13 +19,14 @@ class Main {
         int total=0;
         int score = 1;
         for(int i=0; i<N; i++){
-            if(time<0){
+             if(time<0){
                 reward(total);
                 total=0;
                 score = 1;
                 spend = 4;
                 time =240;
             }
+            
             if(arr[i]==1){
                 reward(total);
                 total=0;
@@ -40,8 +41,6 @@ class Main {
                 else
                     spend+=2;
             }
-            else if(arr[i]==3){
-            }
             else if(arr[i]==4){
                 time-=56;
             }
@@ -49,7 +48,7 @@ class Main {
                 if(spend>1)
                     spend-=1;
             }
-            else{
+            else if(arr[i]==6){
                 if(score<32)
                     score*=2;
             }
