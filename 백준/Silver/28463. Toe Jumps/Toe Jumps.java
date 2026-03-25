@@ -21,9 +21,9 @@ class Main {
             tmp = arr[0][1]; arr[0][1]=arr[1][0]; arr[1][0]=tmp;
         }
         else if(dir=='W'){
-            tmp = arr[0][0]; arr[0][0] = arr[1][0]; arr[1][0] = tmp; 
-            tmp = arr[0][1]; arr[0][1] = arr[1][1]; arr[1][1] = tmp;
-            tmp = arr[0][0]; arr[0][0] = arr[1][1]; arr[1][1] = tmp; 
+            tmp = arr[0][0]; arr[0][0] = arr[0][1]; arr[0][1] = tmp; 
+            tmp = arr[1][0]; arr[1][0] = arr[1][1]; arr[1][1] = tmp; 
+            tmp = arr[0][1]; arr[0][1] = arr[1][0]; arr[1][0] = tmp;
         }
         else if(dir=='E'){
             tmp = arr[0][0]; arr[0][0] = arr[0][1]; arr[0][1] = tmp; 
