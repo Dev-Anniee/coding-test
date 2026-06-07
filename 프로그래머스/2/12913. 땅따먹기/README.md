@@ -1,6 +1,6 @@
 # [level 2] 땅따먹기 - 12913 
 
-[문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/12913?language=java) 
+[문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/12913?language=java%20%EC%9E%90%EB%B0%94) 
 
 ### 성능 요약
 
@@ -16,7 +16,7 @@
 
 ### 제출 일자
 
-2026년 06월 07일 22:39:43
+2026년 06월 07일 22:40:37
 
 ### 문제 설명
 
