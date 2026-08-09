@@ -10,20 +10,19 @@ public class Main {
 
         int[] num_of_days = new int[] {0, 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
 
-        if (m1 == m2) {
-            System.out.println(d2 - d1 + 1);
-        } 
-
-        else {
-            int start = num_of_days[m1] - d1 + 1;
-            int gap = 0;
-
-            for (int i = m1 + 1; i < m2; i++) {
-                gap += num_of_days[i];
-            }
-
-            int end = d2;
-            System.out.println(start + gap + end);
+        // 1. 1월 1일부터 m1월 d1일까지의 총 일수
+        int totalDays1 = d1;
+        for (int i = 1; i < m1; i++) {
+            totalDays1 += num_of_days[i];
         }
+
+        // 2. 1월 1일부터 m2월 d2일까지의 총 일수
+        int totalDays2 = d2;
+        for (int i = 1; i < m2; i++) {
+            totalDays2 += num_of_days[i];
+        }
+
+        // 3. 두 날짜의 차이 + 1 (시작일 포함)
+        System.out.println(totalDays2 - totalDays1 + 1);
     }
 }
