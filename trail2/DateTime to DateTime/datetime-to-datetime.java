@@ -10,10 +10,6 @@ public class Main {
         int end = C+ 60*B+ 24*60*A;
         int answer = end-start;
 
-        if(answer<0){
-            System.out.println(-1);
-            return;
-        }
-        System.out.println(answer);
+        System.out.println(answer < 0 ? -1 : answer);
     }
 }
