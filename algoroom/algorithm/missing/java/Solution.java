@@ -1,15 +1,9 @@
 class Solution {
     public int solution(int n, int[] numbers) {
-        int[] check = new int[n+1];
-
+        int sum = (int)n*(n+1)/2;
         for(int i=0; i<numbers.length; i++){
-            check[numbers[i]] = 1;
+            sum-=numbers[i];
         }
-
-        for(int i=1; i<check.length; i++){
-            if(check[i]!=1)
-                return i;
-        }
-        return 0;
+        return sum;
     }
 }
