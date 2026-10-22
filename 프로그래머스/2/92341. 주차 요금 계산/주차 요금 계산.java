@@ -40,8 +40,8 @@ class Solution {
             if(totalTime < fees[0]){
                 answer[index] = fees[1];
             }else{
-                double extraTime = totalTime - fees[0];
-                int extraFee = (int) Math.ceil(extraTime / fees[2]) * fees[3];
+                int extraTime = totalTime - fees[0];
+                int extraFee = (int) Math.ceil((double)extraTime / fees[2]) * fees[3];
                 answer[index] = fees[1] + extraFee;
             }
             index++;
