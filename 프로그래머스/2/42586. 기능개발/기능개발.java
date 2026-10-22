@@ -3,32 +3,30 @@ import java.util.*;
 class Solution {
     public int[] solution(int[] progresses, int[] speeds) {
         int n = progresses.length;
-        int[] costs = new int[n];
+        int[] spend = new int[n];
         
-        for(int i = 0; i < n; i++) {
-            costs[i] = (100 - progresses[i] + speeds[i] - 1) / speeds[i];
+        for(int i=0; i<n; i++){
+            spend[i] = (99-progresses[i]+speeds[i])/speeds[i];
         }
         
-        int now = 0;
-        List<Integer> arr = new ArrayList<>();
-        
-        while(now < n) {
-            int count = 1; 
-            for(int j = now + 1; j < n; j++) {
-                if(costs[now] >= costs[j]) {
-                    count++;
-                } else {
-                    break;
-                }
-            }
-            arr.add(count);
-            now += count;
-        }   
-    
+        int s = spend[0];
+        int count =1;
+        ArrayList<Integer> arr = new ArrayList<>();
+        for(int i=1; i<n; i++){
+            if(s>=spend[i])
+                count++;
+            else{
+                arr.add(count);
+                count=1;
+                s = spend[i];  
+            } 
+        }    
+        arr.add(count);
         int[] answer = new int[arr.size()];
         for(int i=0; i<arr.size(); i++){
-            answer[i]= arr.get(i); 
+            answer[i] = arr.get(i);
         }
-        return answer;
+         
+    return answer;
     }
 }
