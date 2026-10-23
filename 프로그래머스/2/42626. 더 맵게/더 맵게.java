@@ -9,13 +9,11 @@ class Solution {
         
         while(pq.peek()<K){
             if(pq.size()<2)
-                break;
+                return -1;
             int sauce = pq.poll() + (2*pq.poll());
             pq.offer(sauce);
             answer++;
         }
-        if(pq.peek()<K)
-            return -1;
         return answer;
     }
 }
