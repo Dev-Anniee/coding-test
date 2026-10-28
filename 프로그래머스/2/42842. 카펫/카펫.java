@@ -1,17 +1,16 @@
 class Solution {
     public int[] solution(int brown, int yellow) {
-        int[] answer = new int[2];
+        int total = brown + yellow;
         
-        for(int i=3;i<brown+yellow;i++){
-            int width = (brown+yellow)/i; 
-            if(width>=i){
-                 if ((i - 2) * (width - 2) == yellow) {
-                answer[0] = width;
-                answer[1] = i;
-                break;
+        for(int h = 3; h<=Math.sqrt(total); h++){
+            if (total % h == 0) {
+                int w = total / h;
+                
+                if ((w - 2) * (h - 2) == yellow) {
+                    return new int[]{w, h};
                 }
             }
         }
-        return answer;
+        return new int[]{};
     }
 }
