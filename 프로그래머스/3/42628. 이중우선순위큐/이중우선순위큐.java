@@ -1,46 +1,40 @@
 import java.util.*;
-
 class Solution {
     public int[] solution(String[] operations) {
-        int[] answer = {};
         int n = operations.length;
+        TreeMap<Integer, Integer> treeMap = new TreeMap<>();
         
-        //값, 개수
-        TreeMap<Integer, Integer> map = new TreeMap<>();
         for(int i=0; i<n; i++){
             String[] parts = operations[i].split(" ");
             if(parts[0].equals("I")){
-                int num = Integer.parseInt(parts[1]);
-                map.put(num,map.getOrDefault(num,0)+1);
+                int tmp = Integer.parseInt(parts[1]);
+                treeMap.put(tmp,treeMap.getOrDefault(tmp,0)+1);
             }
             
-            if(!map.isEmpty() && parts[0].equals("D")){
+            else if(!treeMap.isEmpty() && parts[0].equals("D")){
                 if(parts[1].equals("1")){
-                    int maxKey = map.lastKey();
-                    int count = map.get(maxKey);
-                    
-                    if(count == 1)
-                        map.remove(maxKey);
+                    int maxK = treeMap.lastKey();
+                    int count = treeMap.get(maxK);
+                    if(count==1)
+                        treeMap.remove(maxK);
                     else
-                        map.put(maxKey, count-1);
+                        treeMap.put(maxK, count-1);
                 }
-                                
-                    if(parts[1].equals("-1")){
-                    int minKey = map.firstKey();
-                    int count = map.get(minKey);
-                    
-                    if(count == 1)
-                        map.remove(minKey);
+                
+                if(parts[1].equals("-1")){
+                    int minK = treeMap.firstKey();
+                    int count = treeMap.get(minK);
+                    if(count==1)
+                        treeMap.remove(minK);
                     else
-                        map.put(minKey, count-1);
+                        treeMap.put(minK, count-1);
                 }
-                    
             }
         }
-        if (map.isEmpty()) {
-            return new int[]{0, 0};
-        } else {
-            return new int[]{map.lastKey(), map.firstKey()};
-        }
+        
+        if(treeMap.isEmpty())
+            return new int[]{0,0};
+        else
+            return new int[]{treeMap.lastKey(), treeMap.firstKey()};
     }
 }
