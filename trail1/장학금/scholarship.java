@@ -7,11 +7,16 @@ public class Main {
         int mid = sc.nextInt();
         int fin = sc.nextInt();
 
-        if(mid>=90 && fin>=95)
-            System.out.println(100000);
-
-        else if(mid>=90 && fin>=90)
-            System.out.println(50000);
+        if(mid>=90){
+            if(fin>=95)
+                System.out.println(100000);
+            
+            else if(fin>=90)
+                System.out.println(50000);
+            
+            else
+                System.out.println(0);
+        }
         
         else
             System.out.println(0);
