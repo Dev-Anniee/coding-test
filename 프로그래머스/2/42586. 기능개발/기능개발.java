@@ -1,32 +1,39 @@
 import java.util.*;
-
 class Solution {
     public int[] solution(int[] progresses, int[] speeds) {
         int n = progresses.length;
-        int[] spend = new int[n];
+        Queue<Integer> spend = new LinkedList<>();
+        List<Integer> deployCounts = new ArrayList<>();
         
         for(int i=0; i<n; i++){
-            spend[i] = (99-progresses[i]+speeds[i])/speeds[i];
+            // 계산된 일수 (예상 소요 날짜) 큐에 넣기
+            int days = (100-progresses[i]+speeds[i]-1)/speeds[i];
+            spend.offer(days);
         }
         
-        int s = spend[0];
+        int deployDay = spend.poll();
         int count =1;
-        ArrayList<Integer> arr = new ArrayList<>();
-        for(int i=1; i<n; i++){
-            if(s>=spend[i])
+        
+        while(!spend.isEmpty()){
+            if(deployDay>=spend.peek()){
                 count++;
+                spend.poll();
+            }
+            
             else{
-                arr.add(count);
-                count=1;
-                s = spend[i];  
-            } 
-        }    
-        arr.add(count);
-        int[] answer = new int[arr.size()];
-        for(int i=0; i<arr.size(); i++){
-            answer[i] = arr.get(i);
+                deployCounts.add(count);
+                count = 1;
+                deployDay = spend.poll();
+            }
         }
-         
-    return answer;
+        
+        deployCounts.add(count);
+        
+        int[] answer = new int[deployCounts.size()];
+        for(int i=0; i<deployCounts.size(); i++){
+            answer[i] = deployCounts.get(i);
+        }
+        
+        return answer;
     }
 }
