@@ -4,7 +4,7 @@
 
 ### 성능 요약
 
-메모리: 0.0 MB, 시간: 0.00 ms
+메모리: undefined, 시간: 
 
 ### 구분
 
@@ -12,230 +12,230 @@
 
 ### 채점결과
 
-Empty
+합계: 100.0 / 100.0
 
 ### 제출 일자
 
-2026년 02월 27일 17:28:00
+2026년 11월 11일 15:14:26
 
 ### 문제 설명
 
-<p style="user-select: auto !important;">다음은 어느 의류 쇼핑몰에 가입한 회원 정보를 담은 <code style="user-select: auto !important;">USER_INFO</code> 테이블과 온라인 상품 판매 정보를 담은 <code style="user-select: auto !important;">ONLINE_SALE</code> 테이블 입니다.<code style="user-select: auto !important;">USER_INFO</code> 테이블은 아래와 같은 구조로 되어있으며 <code style="user-select: auto !important;">USER_ID</code>, <code style="user-select: auto !important;">GENDER</code>, <code style="user-select: auto !important;">AGE</code>, <code style="user-select: auto !important;">JOINED</code>는 각각 회원 ID, 성별, 나이, 가입일을 나타냅니다.</p>
-<table class="table" style="user-select: auto !important;">
-        <thead style="user-select: auto !important;"><tr style="user-select: auto !important;">
-<th style="user-select: auto !important;">Column name</th>
-<th style="user-select: auto !important;">Type</th>
-<th style="user-select: auto !important;">Nullable</th>
+<p>다음은 어느 의류 쇼핑몰에 가입한 회원 정보를 담은 <code>USER_INFO</code> 테이블과 온라인 상품 판매 정보를 담은 <code>ONLINE_SALE</code> 테이블 입니다.<code>USER_INFO</code> 테이블은 아래와 같은 구조로 되어있으며 <code>USER_ID</code>, <code>GENDER</code>, <code>AGE</code>, <code>JOINED</code>는 각각 회원 ID, 성별, 나이, 가입일을 나타냅니다.</p>
+<table class="table">
+        <thead><tr>
+<th>Column name</th>
+<th>Type</th>
+<th>Nullable</th>
 </tr>
 </thead>
-        <tbody style="user-select: auto !important;"><tr style="user-select: auto !important;">
-<td style="user-select: auto !important;">USER_ID</td>
-<td style="user-select: auto !important;">INTEGER</td>
-<td style="user-select: auto !important;">FALSE</td>
+        <tbody><tr>
+<td>USER_ID</td>
+<td>INTEGER</td>
+<td>FALSE</td>
 </tr>
-<tr style="user-select: auto !important;">
-<td style="user-select: auto !important;">GENDER</td>
-<td style="user-select: auto !important;">TINYINT(1)</td>
-<td style="user-select: auto !important;">TRUE</td>
+<tr>
+<td>GENDER</td>
+<td>TINYINT(1)</td>
+<td>TRUE</td>
 </tr>
-<tr style="user-select: auto !important;">
-<td style="user-select: auto !important;">AGE</td>
-<td style="user-select: auto !important;">INTEGER</td>
-<td style="user-select: auto !important;">TRUE</td>
+<tr>
+<td>AGE</td>
+<td>INTEGER</td>
+<td>TRUE</td>
 </tr>
-<tr style="user-select: auto !important;">
-<td style="user-select: auto !important;">JOINED</td>
-<td style="user-select: auto !important;">DATE</td>
-<td style="user-select: auto !important;">FALSE</td>
+<tr>
+<td>JOINED</td>
+<td>DATE</td>
+<td>FALSE</td>
 </tr>
 </tbody>
       </table>
-<p style="user-select: auto !important;"><code style="user-select: auto !important;">GENDER</code> 컬럼은 비어있거나 0 또는 1의 값을 가지며 0인 경우 남자를, 1인 경우는 여자를 나타냅니다.</p>
+<p><code>GENDER</code> 컬럼은 비어있거나 0 또는 1의 값을 가지며 0인 경우 남자를, 1인 경우는 여자를 나타냅니다.</p>
 
-<p style="user-select: auto !important;"><code style="user-select: auto !important;">ONLINE_SALE</code> 테이블은 아래와 같은 구조로 되어있으며, <code style="user-select: auto !important;">ONLINE_SALE_ID</code>, <code style="user-select: auto !important;">USER_ID</code>, <code style="user-select: auto !important;">PRODUCT_ID</code>, <code style="user-select: auto !important;">SALES_AMOUNT</code>, <code style="user-select: auto !important;">SALES_DATE</code>는 각각 온라인 상품 판매 ID, 회원 ID, 상품 ID, 판매량, 판매일을 나타냅니다.</p>
-<table class="table" style="user-select: auto !important;">
-        <thead style="user-select: auto !important;"><tr style="user-select: auto !important;">
-<th style="user-select: auto !important;">Column name</th>
-<th style="user-select: auto !important;">Type</th>
-<th style="user-select: auto !important;">Nullable</th>
+<p><code>ONLINE_SALE</code> 테이블은 아래와 같은 구조로 되어있으며, <code>ONLINE_SALE_ID</code>, <code>USER_ID</code>, <code>PRODUCT_ID</code>, <code>SALES_AMOUNT</code>, <code>SALES_DATE</code>는 각각 온라인 상품 판매 ID, 회원 ID, 상품 ID, 판매량, 판매일을 나타냅니다.</p>
+<table class="table">
+        <thead><tr>
+<th>Column name</th>
+<th>Type</th>
+<th>Nullable</th>
 </tr>
 </thead>
-        <tbody style="user-select: auto !important;"><tr style="user-select: auto !important;">
-<td style="user-select: auto !important;">ONLINE_SALE_ID</td>
-<td style="user-select: auto !important;">INTEGER</td>
-<td style="user-select: auto !important;">FALSE</td>
+        <tbody><tr>
+<td>ONLINE_SALE_ID</td>
+<td>INTEGER</td>
+<td>FALSE</td>
 </tr>
-<tr style="user-select: auto !important;">
-<td style="user-select: auto !important;">USER_ID</td>
-<td style="user-select: auto !important;">INTEGER</td>
-<td style="user-select: auto !important;">FALSE</td>
+<tr>
+<td>USER_ID</td>
+<td>INTEGER</td>
+<td>FALSE</td>
 </tr>
-<tr style="user-select: auto !important;">
-<td style="user-select: auto !important;">PRODUCT_ID</td>
-<td style="user-select: auto !important;">INTEGER</td>
-<td style="user-select: auto !important;">FALSE</td>
+<tr>
+<td>PRODUCT_ID</td>
+<td>INTEGER</td>
+<td>FALSE</td>
 </tr>
-<tr style="user-select: auto !important;">
-<td style="user-select: auto !important;">SALES_AMOUNT</td>
-<td style="user-select: auto !important;">INTEGER</td>
-<td style="user-select: auto !important;">FALSE</td>
+<tr>
+<td>SALES_AMOUNT</td>
+<td>INTEGER</td>
+<td>FALSE</td>
 </tr>
-<tr style="user-select: auto !important;">
-<td style="user-select: auto !important;">SALES_DATE</td>
-<td style="user-select: auto !important;">DATE</td>
-<td style="user-select: auto !important;">FALSE</td>
+<tr>
+<td>SALES_DATE</td>
+<td>DATE</td>
+<td>FALSE</td>
 </tr>
 </tbody>
       </table>
-<p style="user-select: auto !important;">동일한 날짜, 회원 ID, 상품 ID 조합에 대해서는 하나의 판매 데이터만 존재합니다.</p>
+<p>동일한 날짜, 회원 ID, 상품 ID 조합에 대해서는 하나의 판매 데이터만 존재합니다.</p>
 
-<hr style="user-select: auto !important;">
+<hr>
 
-<h5 style="user-select: auto !important;">문제</h5>
+<h5>문제</h5>
 
-<p style="user-select: auto !important;"><code style="user-select: auto !important;">USER_INFO</code> 테이블과 <code style="user-select: auto !important;">ONLINE_SALE</code> 테이블에서 년, 월, 성별 별로 상품을 구매한 회원수를 집계하는 SQL문을 작성해주세요. 결과는 년, 월, 성별을 기준으로 오름차순 정렬해주세요. 이때, 성별 정보가 없는 경우 결과에서 제외해주세요.</p>
+<p><code>USER_INFO</code> 테이블과 <code>ONLINE_SALE</code> 테이블에서 년, 월, 성별 별로 상품을 구매한 회원수를 집계하는 SQL문을 작성해주세요. 결과는 년, 월, 성별을 기준으로 오름차순 정렬해주세요. 이때, 성별 정보가 없는 경우 결과에서 제외해주세요.</p>
 
-<hr style="user-select: auto !important;">
+<hr>
 
-<h5 style="user-select: auto !important;">예시</h5>
+<h5>예시</h5>
 
-<p style="user-select: auto !important;">예를 들어 <code style="user-select: auto !important;">USER_INFO</code> 테이블이 다음과 같고</p>
-<table class="table" style="user-select: auto !important;">
-        <thead style="user-select: auto !important;"><tr style="user-select: auto !important;">
-<th style="user-select: auto !important;">USER_ID</th>
-<th style="user-select: auto !important;">GENDER</th>
-<th style="user-select: auto !important;">AGE</th>
-<th style="user-select: auto !important;">JOINED</th>
+<p>예를 들어 <code>USER_INFO</code> 테이블이 다음과 같고</p>
+<table class="table">
+        <thead><tr>
+<th>USER_ID</th>
+<th>GENDER</th>
+<th>AGE</th>
+<th>JOINED</th>
 </tr>
 </thead>
-        <tbody style="user-select: auto !important;"><tr style="user-select: auto !important;">
-<td style="user-select: auto !important;">1</td>
-<td style="user-select: auto !important;">1</td>
-<td style="user-select: auto !important;">26</td>
-<td style="user-select: auto !important;">2021-06-01</td>
+        <tbody><tr>
+<td>1</td>
+<td>1</td>
+<td>26</td>
+<td>2021-06-01</td>
 </tr>
-<tr style="user-select: auto !important;">
-<td style="user-select: auto !important;">2</td>
-<td style="user-select: auto !important;">NULL</td>
-<td style="user-select: auto !important;">NULL</td>
-<td style="user-select: auto !important;">2021-06-25</td>
+<tr>
+<td>2</td>
+<td>NULL</td>
+<td>NULL</td>
+<td>2021-06-25</td>
 </tr>
-<tr style="user-select: auto !important;">
-<td style="user-select: auto !important;">3</td>
-<td style="user-select: auto !important;">0</td>
-<td style="user-select: auto !important;">NULL</td>
-<td style="user-select: auto !important;">2021-06-30</td>
+<tr>
+<td>3</td>
+<td>0</td>
+<td>NULL</td>
+<td>2021-06-30</td>
 </tr>
-<tr style="user-select: auto !important;">
-<td style="user-select: auto !important;">4</td>
-<td style="user-select: auto !important;">0</td>
-<td style="user-select: auto !important;">31</td>
-<td style="user-select: auto !important;">2021-07-03</td>
+<tr>
+<td>4</td>
+<td>0</td>
+<td>31</td>
+<td>2021-07-03</td>
 </tr>
-<tr style="user-select: auto !important;">
-<td style="user-select: auto !important;">5</td>
-<td style="user-select: auto !important;">1</td>
-<td style="user-select: auto !important;">25</td>
-<td style="user-select: auto !important;">2021-07-09</td>
+<tr>
+<td>5</td>
+<td>1</td>
+<td>25</td>
+<td>2021-07-09</td>
 </tr>
-<tr style="user-select: auto !important;">
-<td style="user-select: auto !important;">6</td>
-<td style="user-select: auto !important;">1</td>
-<td style="user-select: auto !important;">33</td>
-<td style="user-select: auto !important;">2021-07-14</td>
+<tr>
+<td>6</td>
+<td>1</td>
+<td>33</td>
+<td>2021-07-14</td>
 </tr>
 </tbody>
       </table>
-<p style="user-select: auto !important;"><code style="user-select: auto !important;">ONLINE_SALE</code> 테이블이 다음과 같다면</p>
-<table class="table" style="user-select: auto !important;">
-        <thead style="user-select: auto !important;"><tr style="user-select: auto !important;">
-<th style="user-select: auto !important;">ONLINE_SALE_ID</th>
-<th style="user-select: auto !important;">USER_ID</th>
-<th style="user-select: auto !important;">PRODUCT_ID</th>
-<th style="user-select: auto !important;">SALES_AMOUNT</th>
-<th style="user-select: auto !important;">SALES_DATE</th>
+<p><code>ONLINE_SALE</code> 테이블이 다음과 같다면</p>
+<table class="table">
+        <thead><tr>
+<th>ONLINE_SALE_ID</th>
+<th>USER_ID</th>
+<th>PRODUCT_ID</th>
+<th>SALES_AMOUNT</th>
+<th>SALES_DATE</th>
 </tr>
 </thead>
-        <tbody style="user-select: auto !important;"><tr style="user-select: auto !important;">
-<td style="user-select: auto !important;">1</td>
-<td style="user-select: auto !important;">1</td>
-<td style="user-select: auto !important;">54</td>
-<td style="user-select: auto !important;">1</td>
-<td style="user-select: auto !important;">2022-01-01</td>
+        <tbody><tr>
+<td>1</td>
+<td>1</td>
+<td>54</td>
+<td>1</td>
+<td>2022-01-01</td>
 </tr>
-<tr style="user-select: auto !important;">
-<td style="user-select: auto !important;">2</td>
-<td style="user-select: auto !important;">1</td>
-<td style="user-select: auto !important;">3</td>
-<td style="user-select: auto !important;">2</td>
-<td style="user-select: auto !important;">2022-01-25</td>
+<tr>
+<td>2</td>
+<td>1</td>
+<td>3</td>
+<td>2</td>
+<td>2022-01-25</td>
 </tr>
-<tr style="user-select: auto !important;">
-<td style="user-select: auto !important;">3</td>
-<td style="user-select: auto !important;">4</td>
-<td style="user-select: auto !important;">34</td>
-<td style="user-select: auto !important;">1</td>
-<td style="user-select: auto !important;">2022-01-30</td>
+<tr>
+<td>3</td>
+<td>4</td>
+<td>34</td>
+<td>1</td>
+<td>2022-01-30</td>
 </tr>
-<tr style="user-select: auto !important;">
-<td style="user-select: auto !important;">4</td>
-<td style="user-select: auto !important;">6</td>
-<td style="user-select: auto !important;">253</td>
-<td style="user-select: auto !important;">3</td>
-<td style="user-select: auto !important;">2022-02-03</td>
+<tr>
+<td>4</td>
+<td>6</td>
+<td>253</td>
+<td>3</td>
+<td>2022-02-03</td>
 </tr>
-<tr style="user-select: auto !important;">
-<td style="user-select: auto !important;">5</td>
-<td style="user-select: auto !important;">2</td>
-<td style="user-select: auto !important;">31</td>
-<td style="user-select: auto !important;">2</td>
-<td style="user-select: auto !important;">2022-02-09</td>
+<tr>
+<td>5</td>
+<td>2</td>
+<td>31</td>
+<td>2</td>
+<td>2022-02-09</td>
 </tr>
-<tr style="user-select: auto !important;">
-<td style="user-select: auto !important;">6</td>
-<td style="user-select: auto !important;">5</td>
-<td style="user-select: auto !important;">35</td>
-<td style="user-select: auto !important;">1</td>
-<td style="user-select: auto !important;">2022-02-14</td>
+<tr>
+<td>6</td>
+<td>5</td>
+<td>35</td>
+<td>1</td>
+<td>2022-02-14</td>
 </tr>
-<tr style="user-select: auto !important;">
-<td style="user-select: auto !important;">7</td>
-<td style="user-select: auto !important;">5</td>
-<td style="user-select: auto !important;">57</td>
-<td style="user-select: auto !important;">1</td>
-<td style="user-select: auto !important;">2022-02-18</td>
+<tr>
+<td>7</td>
+<td>5</td>
+<td>57</td>
+<td>1</td>
+<td>2022-02-18</td>
 </tr>
 </tbody>
       </table>
-<p style="user-select: auto !important;">2022년 1월에 상품을 구매한 회원은 <code style="user-select: auto !important;">USER_ID</code> 가 1(<code style="user-select: auto !important;">GENDER</code>=1), 4(<code style="user-select: auto !important;">GENDER</code>=0)인 회원들이고,<br style="user-select: auto !important;">
-2022년 2월에 상품을 구매한 회원은 <code style="user-select: auto !important;">USER_ID</code> 가 2(<code style="user-select: auto !important;">GENDER</code>=NULL), 5(<code style="user-select: auto !important;">GENDER</code>=1), 6(<code style="user-select: auto !important;">GENDER</code>=1)인 회원들 이므로,</p>
+<p>2022년 1월에 상품을 구매한 회원은 <code>USER_ID</code> 가 1(<code>GENDER</code>=1), 4(<code>GENDER</code>=0)인 회원들이고,<br>
+2022년 2월에 상품을 구매한 회원은 <code>USER_ID</code> 가 2(<code>GENDER</code>=NULL), 5(<code>GENDER</code>=1), 6(<code>GENDER</code>=1)인 회원들 이므로,</p>
 
-<p style="user-select: auto !important;">년, 월, 성별 별로 상품을 구매한 회원수를 집계하고, 년, 월, 성별을 기준으로 오름차순 정렬하면 다음과 같은 결과가 나와야 합니다.</p>
-<table class="table" style="user-select: auto !important;">
-        <thead style="user-select: auto !important;"><tr style="user-select: auto !important;">
-<th style="user-select: auto !important;">YEAR</th>
-<th style="user-select: auto !important;">MONTH</th>
-<th style="user-select: auto !important;">GENDER</th>
-<th style="user-select: auto !important;">USERS</th>
+<p>년, 월, 성별 별로 상품을 구매한 회원수를 집계하고, 년, 월, 성별을 기준으로 오름차순 정렬하면 다음과 같은 결과가 나와야 합니다.</p>
+<table class="table">
+        <thead><tr>
+<th>YEAR</th>
+<th>MONTH</th>
+<th>GENDER</th>
+<th>USERS</th>
 </tr>
 </thead>
-        <tbody style="user-select: auto !important;"><tr style="user-select: auto !important;">
-<td style="user-select: auto !important;">2022</td>
-<td style="user-select: auto !important;">1</td>
-<td style="user-select: auto !important;">0</td>
-<td style="user-select: auto !important;">1</td>
+        <tbody><tr>
+<td>2022</td>
+<td>1</td>
+<td>0</td>
+<td>1</td>
 </tr>
-<tr style="user-select: auto !important;">
-<td style="user-select: auto !important;">2022</td>
-<td style="user-select: auto !important;">1</td>
-<td style="user-select: auto !important;">1</td>
-<td style="user-select: auto !important;">1</td>
+<tr>
+<td>2022</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
 </tr>
-<tr style="user-select: auto !important;">
-<td style="user-select: auto !important;">2022</td>
-<td style="user-select: auto !important;">2</td>
-<td style="user-select: auto !important;">1</td>
-<td style="user-select: auto !important;">2</td>
+<tr>
+<td>2022</td>
+<td>2</td>
+<td>1</td>
+<td>2</td>
 </tr>
 </tbody>
       </table>
