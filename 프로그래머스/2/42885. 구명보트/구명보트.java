@@ -1,26 +1,24 @@
-import java.util.Arrays;
+import java.util.*;
 
 class Solution {
     public int solution(int[] people, int limit) {
         Arrays.sort(people);
+        int left = 0; 
+        int right = people.length - 1;
+        
         int answer = 0;
-        int l =0; 
-        int r =people.length-1;
-        
-        while (l<=r){
-            if (l == r) {
+        while(left<=right){
+            if (people[left] + people[right] <= limit) {
+                left++;
+                right--;
                 answer++;
-                break;
             }
-            if(people[r]+people[l]<=limit){
-                l++; 
-                r--;
+            else{
+                right--; // 가장 무거운 사람 보내기
+                answer++;
             }
-            else
-                r--;
-            answer++;
-        
         }
+        
         return answer;
     }
 }
